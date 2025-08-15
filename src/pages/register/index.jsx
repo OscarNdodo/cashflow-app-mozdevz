@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { ImSpinner6 } from "react-icons/im";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
 
@@ -13,7 +13,21 @@ export default function Register() {
         const register = (e) => {
             e.preventDefault();
             setIsLoad(true);
-           alert("Register aqui")
+            
+            axios.post('https://cashflow-3o0v.onrender.com/api/register', {
+                username,
+                password
+                })
+                .then(function (response) {
+                    if(response.status == 201) {
+                        setIsLoad(false);
+                        navigate("/");
+                    }
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    alert("Erro! Tente mais tarde.");
+                });
         };
     
 

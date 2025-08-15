@@ -1,7 +1,6 @@
 # CashFlow Dashboard
 
-![App Preview]("./screenshot-cashflow.png") <!-- Adicione uma imagem real do seu projeto aqui -->
-
+![App Preview]("https:cashflowmoz.verlcel.app") 
 ## 📌 Visão Geral
 
 O **CashFlow** é uma aplicação web moderna para gestão de fluxo de caixa pessoal. Desenvolvido com React.js e ApexCharts, oferece visualizações intuitivas para acompanhamento financeiro com um design profissional, minimalista e sofisticado.

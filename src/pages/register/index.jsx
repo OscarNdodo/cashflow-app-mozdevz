@@ -14,7 +14,7 @@ export default function Register() {
             e.preventDefault();
             setIsLoad(true);
             
-            axios.post('http://127.0.0.1:5000/api/register', {
+            axios.post('https://cashflow-3o0v.onrender.com/api/register', {
                 username,
                 password
                 })

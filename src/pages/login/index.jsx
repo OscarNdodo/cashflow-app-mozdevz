@@ -12,7 +12,7 @@ export default function Login() {
     const login = (e) => {
         e.preventDefault();
         setIsLoad(true);
-            axios.post("http://127.0.0.1:5000/api/login", {username, password}).
+            axios.post("https://cashflow-3o0v.onrender.com/api/login", {username, password}).
             then((response) => response.data).
             then((data) => {
                 const token = data.access_token;

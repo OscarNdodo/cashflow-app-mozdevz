@@ -35,7 +35,7 @@ const Dashboard = () => {
    const loadData = async () => {
     setIsLoading(true);
     try {
-        await axios.get("http://127.0.0.1:5000/api/transactions", {
+        await axios.get("https://cashflow-3o0v.onrender.com/api/transactions", {
             headers: {
                 Authorization: "Bearer " + token
             }
@@ -89,7 +89,7 @@ const Dashboard = () => {
             type: formData.type,
         };
 
-        const status = await axios.post("http://127.0.0.1:5000/api/transactions", newTransaction, {
+        const status = await axios.post("https://cashflow-3o0v.onrender.com/api/transactions", newTransaction, {
             headers: {
                 Authorization: "Bearer " + token,
                 "Content-Type": "application/json"
@@ -117,7 +117,7 @@ const Dashboard = () => {
             type: formData.type,
             description: formData.description
         }
-        const status = await axios.put(`http://127.0.0.1:5000/api/transactions/${id}`, transaction, {
+        const status = await axios.put(`https://cashflow-3o0v.onrender.com/api/transactions/${id}`, transaction, {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token")
             }
@@ -133,7 +133,7 @@ const Dashboard = () => {
     };
 
     const deleteTransaction = async (id) => {
-        const status = await axios.delete(`http://127.0.0.1:5000/api/transactions/${id}`, {
+        const status = await axios.delete(`https://cashflow-3o0v.onrender.com/api/transactions/${id}`, {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token")
             }
